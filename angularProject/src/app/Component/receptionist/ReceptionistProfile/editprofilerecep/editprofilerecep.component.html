@@ -1,0 +1,68 @@
+<div class="mt-5 edit-profile-container" *ngIf="profile">
+    <!-- <h1>Edit Receptionist Profile</h1> -->
+    <div class="row">
+        <div class="col-sm-5 col-5">
+            <h4 class="page-title">Edit Profile</h4>
+        </div>
+        <div class="col-sm-7 col-7 text-right m-b-20">
+            <a href="receptionist-profile" class="btn btn-primary btn-rounded float-end text-white m-1">
+                <i class="fa fa-arrow-left"></i>
+                <span> Back</span>
+            </a>
+        </div>
+    </div>
+
+    <form (ngSubmit)="updateProfile()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input id="name" [(ngModel)]="profile.name" type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input id="phone" [(ngModel)]="profile.phone" type="text" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" [(ngModel)]="profile.email" type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input id="address" [(ngModel)]="profile.address" type="text" name="address">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <input id="gender" [(ngModel)]="profile.gender" type="text" name="gender">
+        </div>
+
+        <div class="form-group">
+            <label for="avatar">Avatar URL:</label>
+            <input id="avatar" [(ngModel)]="profile.avatar" type="text" name="avatar">
+        </div>
+
+        <div class="form-group">
+            <label for="employeeId">Employee ID:</label>
+            <input id="employeeId" [(ngModel)]="profile.employeeId" type="text" name="employeeId">
+        </div>
+
+        <div class="form-group">
+            <label for="position">Position:</label>
+            <input id="position" [(ngModel)]="profile.position" type="text" name="position">
+        </div>
+
+        <div class="form-group">
+            <label for="department">Department:</label>
+            <input id="department" [(ngModel)]="profile.department" type="text" name="department">
+        </div>
+
+        <div class="form-group">
+            <label for="workHours">Work Hours:</label>
+            <input id="workHours" [(ngModel)]="profile.workHours" type="text" name="workHours">
+        </div>
+
+        <button class="submit-button" type="submit">Save Changes</button>
+    </form>
+</div>

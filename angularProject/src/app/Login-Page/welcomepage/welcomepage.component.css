@@ -1,0 +1,91 @@
+
+/* Welcome Page Styles */
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140vh;
+    background-color: #eef1f5;
+}
+
+.welcome-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+.logo {
+    max-width: 120px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.welcome-message p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.highlights {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.highlight-card {
+    background-color: #f9fafb;
+    border-radius: 15px;
+    padding: 25px;
+    width: 30%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.highlight-image {
+    max-width: 70px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.highlight-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 16px;
+    color: #777;
+}
+
+footer a {
+    color: #ff6347;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

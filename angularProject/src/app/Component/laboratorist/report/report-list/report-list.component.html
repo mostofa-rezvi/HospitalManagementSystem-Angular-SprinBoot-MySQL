@@ -1,0 +1,37 @@
+<div class="report-list">
+    <h2>Report List</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Report Name</th>
+                <th>Description</th>
+                <th>Sample ID</th>
+                <th>Report Result</th>
+                <th>Interpretation</th>
+                <th>Test Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let report of reports  ">
+                <td>{{ report.id }}</td>
+                <td>{{ report.reportName }}</td>
+                <td>{{ report.description }}</td>
+                <td>{{ report.sampleId }}</td>
+                <td>{{ report.reportResult }}</td>
+                <td>{{ report.interpretation }}</td>
+                <td>{{ report.testDate | date:'short' }}</td>
+                <td>
+                    <div class="row">
+                        <button (click)="deleteReport(report.id)">Delete</button>
+                    </div>
+                    <div class="row">
+                        <a [routerLink]="['/reports', report.id]" class="mt-1">View</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

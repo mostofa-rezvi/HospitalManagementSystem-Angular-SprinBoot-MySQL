@@ -1,0 +1,27 @@
+<!-- receptionist-profile.component.html -->
+<div class="main-wrapper">
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="tab-pane show active" id="about-cont">
+                <div class="row">
+                    <div class="profile-container" *ngIf="profile">
+                        <img [src]="profile.avatar" alt="Avatar" class="avatar">
+                        <h1>{{ profile.name }}</h1>
+                        <p>{{ profile.position }}</p>
+                        <ul>
+                            <li><strong>Phone:</strong> {{ profile.phone }}</li>
+                            <li><strong>Email:</strong> {{ profile.email }}</li>
+                            <li><strong>Address:</strong> {{ profile.address }}</li>
+                            <li><strong>Gender:</strong> {{ profile.gender }}</li>
+                            <li><strong>Employee ID:</strong> {{ profile.employeeId }}</li>
+                            <li><strong>Department:</strong> {{ profile.department }}</li>
+                            <li><strong>Work Hours:</strong> {{ profile.workHours }}</li>
+                        </ul>
+
+                        <button><a href="receptionist-profile-edit">Edit Profile</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

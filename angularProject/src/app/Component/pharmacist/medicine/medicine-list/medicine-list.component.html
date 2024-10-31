@@ -1,0 +1,32 @@
+<div class="container">
+  <h2>Medicine List</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Dosage Form</th>
+      <th>Instructions</th>
+      <th>Strength</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let medicine of medicines">
+      <td>{{ medicine.id }}</td>
+      <td>{{ medicine.medicineName }}</td>
+      <td>{{ medicine.dosageForm }}</td>
+      <td>{{ medicine.instructions }}</td>
+      <td>{{ medicine.medicineStrength }}</td>
+      <td>{{ medicine.price }}</td>
+      <td>{{ medicine.stock }}</td>
+      <td>
+        <button (click)="updateStock(medicine.id)" class="btn btn-warning">Add Stock</button>
+        <button (click)="navigateToUpdate(medicine.id)" class="btn btn-info">Update</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

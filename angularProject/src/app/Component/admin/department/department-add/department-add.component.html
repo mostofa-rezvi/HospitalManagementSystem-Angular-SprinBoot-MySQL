@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Add Department</h2>
+  <form (ngSubmit)="onSubmit(departmentForm)" #departmentForm="ngForm">
+    <div class="form-group">
+      <label for="departmentName">Department Name:</label>
+      <input type="text" id="departmentName" name="departmentName" ngModel required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" ngModel required class="form-control"></textarea>
+    </div>
+    <button type="submit" [disabled]="departmentForm.invalid" class="btn btn-primary">Add Department</button>
+  </form>
+</div>

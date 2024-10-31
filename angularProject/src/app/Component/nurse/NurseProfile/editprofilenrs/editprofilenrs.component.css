@@ -1,0 +1,94 @@
+/* nurse-edit-profile.component.css */
+/* General container styling */
+.edit-profile-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.edit-profile-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Focus state for inputs */
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styling */
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover state */
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+    .edit-profile-container {
+        padding: 15px;
+    }
+
+    .submit-button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Education and Experience groups */
+.education-group,
+.experience-group {
+    margin-bottom: 10px;
+}
+
+.education-group input,
+.experience-group input {
+    margin-bottom: 5px;
+}

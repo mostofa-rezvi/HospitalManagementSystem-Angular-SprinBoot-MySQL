@@ -1,0 +1,49 @@
+<div class="report-view" id="printable-report">
+    <h1 class="report-title">Blood Test Report</h1>
+
+    <div class="report-details" *ngIf="reports">
+        <p><strong>Report ID:</strong> {{ reports.id }}</p>
+        <p><strong>Patient Name:</strong> {{ user.name }}</p>
+        <p><strong>Sample ID:</strong> {{ reports.sampleId }}</p>
+        <p><strong>Test Date:</strong> {{ reports.testDate | date:'longDate' }}</p>
+        <p><strong>Doctor:</strong> {{ user.role === Role.DOCTOR ? user.name : 'N/A' }}</p>
+    </div>
+
+    <hr>
+
+    <div class="result-section">
+        <h2>Test Results</h2>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Report Name</th>
+                    <th>Description</th>
+                    <th>Result</th>
+                    <th>Interpretation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ reports.reportName }}</td>
+                    <td>{{ reports.description }}</td>
+                    <td>{{ reports.reportResult }}</td>
+                    <td>{{ reports.interpretation }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Overall Interpretation:</strong> {{ reports.interpretation }}</p>
+    </div>
+
+    <div class="signature-section">
+        <p><strong>Authorized Signature:</strong> ______________________</p>
+        <p><strong>Date:</strong> {{ reports.testDate | date:'longDate' }}</p>
+    </div>
+
+    <button class="print-button" (click)="printReport()">Print Report</button>
+
+    <div *ngIf="!reports">
+        <p>No report available or an error occurred while fetching the report.</p>
+    </div>
+</div>

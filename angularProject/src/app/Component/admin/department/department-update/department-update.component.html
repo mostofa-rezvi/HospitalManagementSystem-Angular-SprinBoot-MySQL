@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Update Department</h2>
+
+  <!-- Button to go back to Department List -->
+  <button class="btn btn-secondary mb-3" (click)="navigateToList()">Back to Department List</button>
+
+  <form (ngSubmit)="onSubmit()" #departmentForm="ngForm">
+    <div class="form-group">
+      <label for="departmentName">Department Name:</label>
+      <input type="text" id="departmentName" name="departmentName" [(ngModel)]="department.departmentName" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="department.description" required class="form-control"></textarea>
+    </div>
+    <button type="submit" [disabled]="departmentForm.invalid" class="btn btn-primary">Update Department</button>
+  </form>
+</div>

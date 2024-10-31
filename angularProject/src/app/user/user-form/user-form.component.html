@@ -1,0 +1,99 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4 col-3">
+      <h4 class="page-title">Add User:</h4>
+    </div>
+  </div>
+  <form (ngSubmit)="createOrUpdateUser()" class="needs-validation" novalidate>
+    <input [(ngModel)]="user.id" id="id" name="id" type="hidden"/>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input [(ngModel)]="user.name" class="form-control" id="name" name="name" type="text"/>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input [(ngModel)]="user.email" class="form-control" id="email" name="email" type="email"/>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input [(ngModel)]="user.password" class="form-control" id="password" name="password" type="password"/>
+    </div>
+    <div class="form-group">
+      <label for="cell">Cell:</label>
+      <input [(ngModel)]="user.cell" class="form-control" id="cell" name="cell" type="text"/>
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input [(ngModel)]="user.age" class="form-control" id="age" name="age" type="number"/>
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select [(ngModel)]="user.gender" class="form-control" id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="birthday">Birthday:</label>
+      <input [(ngModel)]="user.birthday" class="form-control" id="birthday" name="birthday" type="date"/>
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input [(ngModel)]="user.address" class="form-control" id="address" name="address" type="text"/>
+    </div>
+    <div class="form-group">
+      <label for="image">Image:</label>
+      <input class="form-control" id="image" name="image" type="file" (change)="onImagePicked($event)"/>
+    </div>
+    <div class="form-group">
+      <label>Role:</label>
+      <select [(ngModel)]="user.role" class="form-control" name="role">
+        <option *ngFor="let option of userRoleOptions" [value]="option.value">{{ option.label }}</option>
+      </select>
+    </div>
+    <div *ngIf="isDoctor()">
+      <div class="form-group">
+        <label for="doctorDegree">Doctor Degree:</label>
+        <input [(ngModel)]="user.doctorDegree" class="form-control" id="doctorDegree" name="doctorDegree" type="text"/>
+      </div>
+      <div class="form-group">
+        <label for="doctorSpeciality">Doctor Speciality:</label>
+        <input [(ngModel)]="user.doctorSpeciality" class="form-control" id="doctorSpeciality" name="doctorSpeciality"
+               type="text"/>
+      </div>
+      <div class="form-group">
+        <label for="doctorLicense">Doctor License:</label>
+        <input [(ngModel)]="user.doctorLicense" class="form-control" id="doctorLicense" name="doctorLicense"
+               type="text"/>
+      </div>
+
+      <div class="form-group">
+        <label for="department">Department:</label>
+        <select [(ngModel)]="user.departmentId" class="form-control" id="department" name="department">
+          <option *ngFor="let department of departments" [value]="department.id">{{ department.departmentName }}</option>
+        </select>
+      </div>
+
+    </div>
+    <div *ngIf="isNurse()">
+      <div class="form-group">
+        <label for="nurseDegree">Nurse Degree:</label>
+        <input [(ngModel)]="user.nurseDegree" class="form-control" id="nurseDegree" name="nurseDegree" type="text"/>
+      </div>
+      <div class="form-group">
+        <label for="nurseSpeciality">Nurse Speciality:</label>
+        <input [(ngModel)]="user.nurseSpeciality" class="form-control" id="nurseSpeciality" name="nurseSpeciality"
+               type="text"/>
+      </div>
+      <div class="form-group">
+        <label for="nurseLicense">Nurse License:</label>
+        <input [(ngModel)]="user.nurseLicense" class="form-control" id="nurseLicense" name="nurseLicense" type="text"/>
+      </div>
+    </div>
+
+    <button class="btn btn-primary m-3" type="submit">Add User</button>
+  </form>
+</div>

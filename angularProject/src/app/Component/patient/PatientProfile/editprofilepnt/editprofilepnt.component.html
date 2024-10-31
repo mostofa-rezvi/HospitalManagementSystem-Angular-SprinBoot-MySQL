@@ -1,0 +1,67 @@
+<!-- patient-edit-profile.component.html -->
+<div class="mt-5 edit-profile-container" *ngIf="profile">
+    <!-- <h1>Edit Profile</h1> -->
+    <div class="row">
+        <div class="col-sm-5 col-5">
+            <h4 class="page-title">Edit Profile</h4>
+        </div>
+        <div class="col-sm-7 col-7 text-right m-b-20">
+            <a href="patientprofile" class="btn btn-primary btn-rounded float-end text-white m-1">
+                <i class="fa fa-arrow-left"></i>
+                <span> Back</span>
+            </a>
+        </div>
+    </div>
+
+    <form (ngSubmit)="updateProfile()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input id="name" [(ngModel)]="profile.name" type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input id="dateOfBirth" [(ngModel)]="profile.dateOfBirth" type="date" name="dateOfBirth">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input id="phone" [(ngModel)]="profile.phone" type="text" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" [(ngModel)]="profile.email" type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input id="address" [(ngModel)]="profile.address" type="text" name="address">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <input id="gender" [(ngModel)]="profile.gender" type="text" name="gender">
+        </div>
+
+        <div class="form-group">
+            <label for="avatar">Avatar URL:</label>
+            <input id="avatar" [(ngModel)]="profile.avatar" type="text" name="avatar">
+        </div>
+
+        <!-- Medical History section -->
+        <div class="form-group">
+            <label for="medicalHistory">Medical History:</label>
+            <textarea id="medicalHistory" [(ngModel)]="profile.medicalHistory" name="medicalHistory"
+                rows="5"></textarea>
+        </div>
+
+        <!-- Allergies section -->
+        <div class="form-group">
+            <label for="allergies">Allergies:</label>
+            <textarea id="allergies" [(ngModel)]="profile.allergies" name="allergies" rows="5"></textarea>
+        </div>
+
+        <button class="submit-button" type="submit">Save Changes</button>
+    </form>
+</div>

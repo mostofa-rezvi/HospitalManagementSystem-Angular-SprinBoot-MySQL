@@ -1,0 +1,73 @@
+<div class="report-create">
+    <h2>Create Report</h2>
+
+    <div class="form-group">
+        <label for="userSelect">Select Patient</label>
+        <select id="userSelect" [(ngModel)]="selectedUser" (change)="onUserSelect()">
+            <option *ngFor="let user of users" [ngValue]="user">
+                {{ user.name }}
+            </option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="patientDetails">Patient Details</label>
+        <div *ngIf="selectedUser">
+            <strong>Name:</strong> {{ selectedUser.name }}<br />
+            <strong>Mobile:</strong> {{ selectedUser.cell }}<br />
+            <strong>Email:</strong> {{ selectedUser.email }}<br />
+            <strong>Address:</strong> {{ selectedUser.address }}<br />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="testSelect">Select Test</label>
+        <select id="testSelect" [(ngModel)]="selectedTest" (change)="onTestSelect()">
+            <option *ngFor="let test of tests" [ngValue]="test">
+                {{ test.testName }}
+            </option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="testDetails">Test Details</label>
+        <div *ngIf="selectedTest">
+            <strong>Test Name:</strong> {{ selectedTest.testName }}<br />
+            <strong>Description:</strong> {{ selectedTest.description }}<br />
+            <strong>Instructions:</strong> {{ selectedTest.instructions }}<br />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="reportName">Report Name</label>
+        <input type="text" id="reportName" [value]="reportName" readonly/>
+    </div>
+
+    <div class="form-group">
+        <label for="reportResult">Standard Report Result</label>
+        <select id="reportResult" [(ngModel)]="reportResult">
+            <option *ngFor="let result of reportResults" [value]="result">
+                {{ result }}
+            </option>
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="sampleId">Sample Result ID</label>
+        <input type="text" id="sampleId" [(ngModel)]="sampleId"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="description">Patient Report Result</label>
+        <input type="text" id="description" [(ngModel)]="description"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="interpretation">Report Result Interpretation</label>
+        <input type="text" id="interpretation" [(ngModel)]="interpretation"/>
+    </div>
+
+    
+    <button (click)="createReport()">Create Report</button>
+</div>

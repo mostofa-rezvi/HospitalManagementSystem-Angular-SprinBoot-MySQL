@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>Add New Medicine</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="medicineName">Medicine Name</label>
+      <input type="text" id="medicineName" [(ngModel)]="medicine.medicineName" name="medicineName" required
+        class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="dosageForm">Dosage Form</label>
+      <input type="text" id="dosageForm" [(ngModel)]="medicine.dosageForm" name="dosageForm" required
+        class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="instructions">Instructions</label>
+      <textarea id="instructions" [(ngModel)]="medicine.instructions" name="instructions" required
+        class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="medicineStrength">Medicine Strength</label>
+      <input type="text" id="medicineStrength" [(ngModel)]="medicine.medicineStrength" name="medicineStrength" required
+        class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" id="price" [(ngModel)]="medicine.price" name="price" required class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="stock">Stock</label>
+      <input type="number" id="stock" [(ngModel)]="medicine.stock" name="stock" required class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="manufacturer">Manufacturer:</label>
+      <select [(ngModel)]="medicine.manufacturer.id" class="form-control" id="manufacturer" name="manufacturer">
+        <option *ngFor="let manufacturer of manufacturers" [value]="manufacturer.id">{{ manufacturer.manufacturerName }}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Medicine</button>
+  </form>
+</div>

@@ -1,0 +1,37 @@
+<div class="invoice-container" id="invoice">
+  <h2 class="text-center">Invoice</h2>
+  <div>
+    <h4>Patient Information</h4>
+    <p><strong>Name:</strong> {{ bill.name }}</p>
+    <p><strong>Phone:</strong> {{ bill.phone }}</p>
+    <p><strong>Email:</strong> {{ bill.email }}</p>
+    <p><strong>Invoice Date:</strong> {{ bill.invoiceDate | date }}</p>
+  </div>
+
+  <h4>Medicine Details</h4>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Medicine Name</th>
+      <th>Dosage Form</th>
+      <th>Medicine Strength</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let medicine of bill.medicineList">
+      <td>{{ medicine.medicineName }}</td>
+      <td>{{ medicine.dosageForm }}</td>
+      <td>{{ medicine.medicineStrength }}</td>
+      <td>{{ medicine.price }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h4>Total Amount: {{ bill.totalAmount }}</h4>
+  <h4>Status: {{ bill.status }}</h4>
+
+  <button (click)="generatePDF()" class="btn btn-success mt-3">Export as PDF</button>
+
+  <div *ngIf="apiError" class="alert alert-danger">{{ apiError }}</div>
+</div>

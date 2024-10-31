@@ -1,0 +1,44 @@
+<div class="report-update">
+    <h2>Update Report</h2>
+
+    <div class="form-group">
+        <label for="userSelect">Select Patient</label>
+        <select id="userSelect" [(ngModel)]="report.user.id">
+            <option *ngFor="let user of users" [ngValue]="user.id">{{ user.name }}</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="testSelect">Select Test</label>
+        <select id="testSelect" [(ngModel)]="report.test.id">
+            <option *ngFor="let test of tests" [ngValue]="test.id">{{ test.testName }}</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="reportName">Report Name</label>
+        <input type="text" id="reportName" [(ngModel)]="report.reportName" />
+    </div>
+
+    <div class="form-group">
+        <label for="reportResult">Report Result</label>
+        <input type="text" id="reportResult" [(ngModel)]="report.reportResult" />
+    </div>
+
+    <div class="form-group">
+        <label for="sampleId">Sample Result ID</label>
+        <input type="text" id="sampleId" [(ngModel)]="report.sampleId" />
+    </div>
+
+    <div class="form-group">
+        <label for="description">Patient Report Result</label>
+        <input type="text" id="description" [(ngModel)]="report.description" />
+    </div>
+
+    <div class="form-group">
+        <label for="interpretation">Report Interpretation</label>
+        <input type="text" id="interpretation" [(ngModel)]="report.interpretation" />
+    </div>
+
+    <button (click)="updateReport()">Update Report</button>
+</div>

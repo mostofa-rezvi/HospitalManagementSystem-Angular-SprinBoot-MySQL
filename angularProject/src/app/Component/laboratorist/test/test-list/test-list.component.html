@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Test List</h2>
+    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Test Name</th>
+                <th>Description</th>
+                <th>Result</th>
+                <th>Instructions</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let test of tests">
+                <td>{{ test.id }}</td>
+                <td>{{ test.testName }}</td>
+                <td>{{ test.description }}</td>
+                <td>{{ test.result }}</td>
+                <td>{{ test.instructions }}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteTest(test.id)">Delete</button>
+                    <a (click)="updateTest(test.id)" class="btn btn-warning">Edit</a>
+                    <!-- (click)="updateLocation(location.id)" -->
+                    <!-- [routerLink]="['/tests/update', test.id]" -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a routerLink="/tests/create" class="btn btn-primary">Create New Test</a>
+</div>

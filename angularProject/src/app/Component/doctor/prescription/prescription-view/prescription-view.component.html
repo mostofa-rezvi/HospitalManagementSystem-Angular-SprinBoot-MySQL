@@ -1,0 +1,24 @@
+<div *ngIf="prescription">
+    <h2>Prescription Details</h2>
+    <div>
+      <h4>Prescription ID: {{ prescription.id }}</h4>
+      <h4>Medicines:</h4>
+      <ul>
+        <li *ngFor="let medicine of prescription.medicine">
+          {{ medicine.medicineName }} ({{ medicine.medicineStrength }})
+        </li>
+      </ul>
+      <h4>Tests:</h4>
+      <ul>
+        <li *ngFor="let test of prescription.test ? [prescription.test] : []">
+          {{ test.testName }}
+        </li>
+      </ul>
+      <h4>Notes:</h4>
+      <p>{{ prescription.notes }}</p>
+    </div>
+  </div>
+  <div *ngIf="!prescription">
+    <p>Loading prescription details...</p>
+  </div>
+  

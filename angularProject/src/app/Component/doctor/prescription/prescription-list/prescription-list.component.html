@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>Prescription List</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Patient Name</th>
+                <th>Medicines</th>
+                <th>Tests</th>
+                <th>Notes</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let prescription of prescriptions">
+                <td>{{ prescription.id }}</td>
+                <td>{{ prescription.user.name }}</td> <!-- Displays Patient's name -->
+                <td>
+                    <ul>
+                        <li *ngFor="let medicine of prescription.medicine">
+                            {{ medicine.medicineName }} ({{ medicine.medicineStrength }})
+                        </li>
+                    </ul>
+                </td>
+                        <td>
+                            <ul>
+                                <li *ngFor="let test of prescription.test ? [prescription.test] : []">
+                                    {{ test.testName }}
+                                </li>
+                            </ul>
+                        </td>
+                <td>{{ prescription.notes }}</td>
+                <td>
+                    <button class="btn btn-info" (click)="viewPrescription(prescription.id)">View</button>
+                    <button class="btn btn-secondary" (click)="printPrescription(prescription)">Print</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

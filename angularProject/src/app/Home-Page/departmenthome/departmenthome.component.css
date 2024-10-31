@@ -1,0 +1,76 @@
+/* General board styling */
+.board {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Header styling */
+  header.department {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header.department h1 {
+    font-size: 2rem;
+    color: darkslategray;
+    margin: 0;
+  }
+  
+  /* Section styling */
+  .departments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px); /* Adjust the percentage based on the number of columns you want */
+    max-width: calc(25% - 20px); /* Ensures cards fit within container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1200px) {
+    .card {
+      flex: 1 1 calc(33.333% - 20px); /* 3 cards per row */
+      max-width: calc(33.333% - 20px);
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .card {
+      flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .card {
+      flex: 1 1 100%; /* 1 card per row */
+      max-width: 100%;
+    }
+  }
+  
+  

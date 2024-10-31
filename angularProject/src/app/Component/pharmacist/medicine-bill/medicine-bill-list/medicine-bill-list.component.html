@@ -1,0 +1,50 @@
+<div class="bill-list-container">
+  <h2 class="text-center">Medicine Bill List</h2>
+
+  <!-- Display a message if there are no bills -->
+  <div *ngIf="bills.length === 0" class="no-bills-message">
+    <p>No bills available.</p>
+  </div>
+
+  <!-- Table displaying the bills -->
+  <table *ngIf="bills.length > 0" class="table table-bordered table-striped mt-4">
+    <thead>
+    <tr>
+      <th>Bill ID</th>
+      <th>Patient Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Invoice Date</th>
+      <th>Total Amount</th>
+      <th>Amount Paid</th>
+      <th>Due Balance</th>
+      <th>Status</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let bill of bills">
+      <td>{{ bill.id }}</td>
+      <td>{{ bill.name }}</td>
+      <td>{{ bill.phone }}</td>
+      <td>{{ bill.email }}</td>
+      <td>{{ bill.invoiceDate | date: 'yyyy-MM-dd' }}</td>
+      <td>{{ bill.totalAmount }}</td>
+      <td>{{ bill.amountPaid }}</td>
+      <td>{{ bill.balance }}</td>
+      <td>{{ bill.status }}</td>
+      <td>{{ bill.description }}</td>
+      <td>
+        <!-- Print Bill Button -->
+        <button (click)="printBill(bill)" class="btn btn-primary">Print</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Create New Bill Button -->
+<!--  <div class="text-center mt-4">-->
+<!--    <button class="btn btn-success" [routerLink]=["medicine-bill"]>Create New Bill</button>-->
+<!--  </div>-->
+<!--</div>-->

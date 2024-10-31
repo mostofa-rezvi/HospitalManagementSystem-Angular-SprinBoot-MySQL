@@ -1,0 +1,40 @@
+<!-- nurse-profile.component.html -->
+<div class="main-wrapper mt-5">
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="tab-pane show active" id="about-cont">
+                <div class="row">
+                    <div class="profile-container" *ngIf="profile">
+                        <img [src]="profile.avatar" src="" alt="Avatar" class="avatar">
+                        <h1>{{ profile.name }}</h1>
+                        <p>{{ profile.specialization }}</p>
+                        <ul>
+                            <li><strong>Phone:</strong> {{ profile.phone }}</li>
+                            <li><strong>Email:</strong> {{ profile.email }}</li>
+                            <li><strong>Birthday:</strong> {{ profile.birthday }}</li>
+                            <li><strong>Address:</strong> {{ profile.address }}</li>
+                            <li><strong>Gender:</strong> {{ profile.gender }}</li>
+                            <li><strong>License Number:</strong> {{ profile.licenseNumber }}</li>
+                        </ul>
+
+                        <h4>Education</h4>
+                        <ul>
+                            <li *ngFor="let edu of profile.education">
+                                {{ edu.degree }} from {{ edu.institution }} ({{ edu.startYear }} - {{ edu.endYear }})
+                            </li>
+                        </ul>
+
+                        <h4>Experience</h4>
+                        <ul>
+                            <li *ngFor="let exp of profile.experience">
+                                {{ exp.position }} ({{ exp.startDate }} - {{ exp.endDate }})
+                            </li>
+                        </ul>
+
+                        <button><a href="nurseprofileedit">Edit Profile</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

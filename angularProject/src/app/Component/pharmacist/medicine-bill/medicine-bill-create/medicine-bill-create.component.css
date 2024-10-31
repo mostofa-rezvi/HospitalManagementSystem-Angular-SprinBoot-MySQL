@@ -1,0 +1,192 @@
+/* Reset some default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  padding: 20px;
+}
+
+.bill-form-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #007bff;
+}
+
+h3 {
+  margin: 15px 0;
+  font-size: 1.5rem;
+  color: #495057;
+}
+
+/* Flexbox for form layout */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Column styles */
+.column {
+  padding: 15px;
+}
+
+/* Patient Info and Amount Section */
+.patient-info-amount {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  border-right: 1px solid #e9ecef;
+}
+
+/* Medicine List Section */
+.medicine-list {
+  flex: 0 0 66.67%;
+  max-width: 66.67%;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons */
+.submit-button,
+.add-medicine-button,
+.remove-medicine-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover,
+.add-medicine-button:hover,
+.remove-medicine-button:hover {
+  background-color: #0056b3;
+}
+
+/* Total Amount and Balance Section */
+.total-amount, .balance {
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .patient-info-amount, .medicine-list {
+    flex: 0 0 100%;
+    max-width: 100%;
+    border-right: none;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+.medicine-list .medicine-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.medicine-group .row {
+  display: flex;
+  justify-content: space-between;
+  width: 48%; /* Each column should take approximately half the width of the container */
+  margin-bottom: 10px; /* Add some space between rows */
+}
+
+.medicine-list .medicine-group {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.medicine-group .row {
+  margin-bottom: 10px; /* Adds spacing between rows */
+}
+
+/* Optional: Style the Remove Medicine button to look more like a card action */
+.remove-medicine-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-medicine-button:hover {
+  background-color: #ff1a1a;
+}
+
+.patient-info-amount {
+  border: 1px solid #ddd; /* Creates a border around the card */
+  border-radius: 8px; /* Rounds the corners */
+  padding: 20px; /* Adds padding inside the card */
+  margin-bottom: 15px; /* Adds space below the card */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Creates a subtle shadow effect */
+  background-color: #f9f9f9; /* Adds a light background color */
+}
+
+.patient-info-amount h3 {
+  margin-top: 0; /* Removes extra top margin from the h3 headings */
+}
+
+/* Optional: Style the form buttons within the patient information card */
+.form-buttons .submit-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.form-buttons .submit-button:hover {
+  background-color: #45a049;
+}

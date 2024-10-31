@@ -1,0 +1,123 @@
+/* General Styles for Report View */
+.report-view {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.report-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.report-details, .result-section, .signature-section {
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+.report-details p, .result-section p, .signature-section p {
+  margin: 8px 0;
+}
+
+.result-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Styles for the results table */
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table.table th, table.table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table.table th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+table.table td {
+  font-size: 1rem;
+}
+
+table.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Signature section */
+.signature-section {
+  text-align: right;
+}
+
+.signature-section p {
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+/* Print Button Styles */
+.print-button {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.print-button:hover {
+  background-color: #0056b3;
+}
+
+/* Print Styles */
+@media print {
+  /* Hide everything except the report view */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Show the report view and its contents */
+  .report-view, .report-view * {
+    visibility: visible;
+  }
+
+  /* Make sure the report section is positioned correctly for printing */
+  .report-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  /* Hide the print button during print */
+  .print-button {
+    display: none;
+  }
+
+  /* Adjust table styles for print */
+  table.table th, table.table td {
+    border: 1px solid black;
+  }
+
+  table.table th {
+    background-color: #f0f0f0;
+  }
+}

@@ -1,0 +1,110 @@
+<div class="bill-form-container">
+  <h2 class="text-center">Create Medicine Bill</h2>
+  <form (ngSubmit)="onSubmit()" class="mt-5">
+    <div class="form-row">
+      <!-- Patient Info and Amount Section (Left Column - 4/12) -->
+      <div class="column patient-info-amount" style="flex: 0 0 33.33%; max-width: 33.33%;">
+        <h3>Patient Information</h3>
+        <div class="form-group">
+          <label for="name">Patient Name:</label>
+          <input type="text" id="name" [(ngModel)]="bill.name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" [(ngModel)]="bill.phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" [(ngModel)]="bill.email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input type="text" id="address" [(ngModel)]="bill.address" name="address" required>
+        </div>
+
+        <div class="form-group">
+          <label for="invoiceDate">Invoice Date:</label>
+          <input type="date" id="invoiceDate" [(ngModel)]="bill.invoiceDate" name="invoiceDate" required>
+        </div>
+
+        <!-- Amount Section Heading -->
+        <h3 class="mt-5">Amount</h3>
+        <div class="form-group">
+          <label>Total Amount:</label>
+          <span>{{ totalAmount }}</span>
+        </div>
+
+        <div class="form-group">
+          <label for="amountPaid">Amount Paid:</label>
+          <input type="number" id="amountPaid" [(ngModel)]="bill.amountPaid" name="amountPaid" required>
+        </div>
+
+        <div class="form-group">
+          <label for="balance">Due Balance:</label>
+          <input type="number" id="balance" [(ngModel)]="bill.balance" name="balance" required
+            [value]="calculateBalance()">
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status:</label>
+          <select id="status" [(ngModel)]="bill.status" name="status">
+            <option value="Paid">Paid</option>
+            <option value="Pending">Pending</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" [(ngModel)]="bill.description" name="description"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-buttons">
+          <button type="submit" class="submit-button">Create Bill</button>
+        </div>
+
+      </div>
+
+      <div class="column medicine-list" style="flex: 0 0 66.67%; max-width: 66.67%;">
+        <h3>Medicine List</h3>
+        <div *ngFor="let medicine of selectedMedicines; let i = index" class="medicine-group">
+
+          <div class="row">
+            <div class="form-group">
+              <label for="medicine-{{i}}">Medicines:</label>
+              <select [(ngModel)]="medicine.id" class="form-control" id="medicine-{{i}}" name="medicine-{{i}}"
+                (change)="onMedicineSelect(medicine, $event)">
+                <option *ngFor="let availableMedicine of availableMedicines" [value]="availableMedicine.id">
+                  {{ availableMedicine.medicineName }}
+                </option>
+              </select>
+            </div>
+            
+
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="price-{{i}}">Price:</label>
+              <input type="number" id="price-{{i}}" [(ngModel)]="medicine.price" name="price-{{i}}"
+                (input)="calculateTotal()" required>
+            </div>
+
+            <!-- <div class="form-group">
+              <label for="medicineStrength-{{i}}">Medicine Strength:</label>
+              <input type="number" id="medicineStrength-{{i}}" [(ngModel)]="medicine.medicineStrength"
+                name="medicineStrength-{{i}}" (input)="calculateTotal()" required>
+            </div> -->
+          </div>
+
+          <button type="button" class="remove-medicine-button" (click)="removeMedicine(i)">Remove Medicine</button>
+        </div>
+
+        <button type="button" class="add-medicine-button mt-3" (click)="addMedicine()">Add Medicine</button>
+      </div>
+    </div>
+  </form>
+</div>

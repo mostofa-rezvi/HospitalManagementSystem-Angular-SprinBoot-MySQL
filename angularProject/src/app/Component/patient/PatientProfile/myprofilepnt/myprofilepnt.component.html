@@ -1,0 +1,38 @@
+<!-- patient-profile.component.html -->
+<div class="main-wrapper">
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="tab-pane show active" id="about-cont">
+                <div class="row">
+                    <div class="profile-container" *ngIf="profile">
+                        <img [src]="profile.avatar" src="" alt="Avatar" class="avatar">
+                        <h1>{{ profile.name }}</h1>
+                        <p>Gender: {{ profile.gender }}</p>
+                        <ul>
+                            <li><strong>Phone:</strong> {{ profile.phone }}</li>
+                            <li><strong>Email:</strong> {{ profile.email }}</li>
+                            <li><strong>Date of Birth:</strong> {{ profile.dateOfBirth }}</li>
+                            <li><strong>Address:</strong> {{ profile.address }}</li>
+                        </ul>
+
+                        <h4>Medical History</h4>
+                        <ul>
+                            <li *ngFor="let history of profile.medicalHistory">
+                                {{ history.condition }} diagnosed on {{ history.diagnosisDate }} ({{ history.notes }})
+                            </li>
+                        </ul>
+
+                        <h4>Allergies</h4>
+                        <ul>
+                            <li *ngFor="let allergy of profile.allergies">
+                                Allergy to {{ allergy.substance }} (Reaction: {{ allergy.reaction }})
+                            </li>
+                        </ul>
+
+                        <button><a href="patientprofileedit">Edit Profile</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

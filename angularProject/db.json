@@ -1,0 +1,587 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "aaaaaa",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "User",
+      "email": "user@gmail.com",
+      "password": "uuuuuu",
+      "role": "user"
+    },
+    {
+      "id": "3",
+      "name": "Doctor",
+      "email": "doctor@gmail.com",
+      "password": "dddddd",
+      "role": "doctor"
+    },
+    {
+      "id": "4",
+      "name": "Nurse",
+      "email": "nurse@gmail.com",
+      "password": "nnnnnn",
+      "role": "nurse"
+    },
+    {
+      "id": "5",
+      "name": "Receptionist",
+      "email": "receptionist@gmail.com",
+      "password": "rrrrrr",
+      "role": "receptionist"
+    },
+    {
+      "id": "bd2b",
+      "username": "mostofa",
+      "emailaddress": "mostofa@gmail.com",
+      "password": "123456",
+      "mobileNumber": "12341523324",
+      "terms": true
+    }
+  ],
+  "locations": [
+    {
+      "id": "0",
+      "name": "Acme Fresh Start Housing",
+      "city": "Chicago",
+      "state": "IL",
+      "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+      "availableUnits": 4,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "1",
+      "name": "A113 Transitional Housing",
+      "city": "Santa Monica",
+      "state": "CA",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+      "availableUnits": 0,
+      "wifi": false,
+      "laundry": true
+    },
+    {
+      "id": "2",
+      "name": "Warm Beds Housing Support",
+      "city": "Juneau",
+      "state": "AK",
+      "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+      "availableUnits": 1,
+      "wifi": false,
+      "laundry": false
+    },
+    {
+      "id": "3",
+      "name": "Homesteady Housing",
+      "city": "Chicago",
+      "state": "IL",
+      "photo": "https://angular.io/assets/images/tutorials/faa/ian-macdonald-W8z6aiwfi1E-unsplash.jpg",
+      "availableUnits": 1,
+      "wifi": true,
+      "laundry": false
+    },
+    {
+      "id": "4",
+      "name": "Happy Homes Group",
+      "city": "Gary",
+      "state": "IN",
+      "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
+      "availableUnits": 1,
+      "wifi": true,
+      "laundry": false
+    },
+    {
+      "id": "5",
+      "name": "Hopeful Apartment Group",
+      "city": "Oakland",
+      "state": "CA",
+      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
+      "availableUnits": 2,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "6",
+      "name": "Seriously Safe Towns",
+      "city": "Oakland",
+      "state": "CA",
+      "photo": "https://angular.io/assets/images/tutorials/faa/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
+      "availableUnits": 5,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "7",
+      "name": "Hopeful Housing Solutions",
+      "city": "Oakland",
+      "state": "CA",
+      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-GGupkreKwxA-unsplash.jpg",
+      "availableUnits": 2,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "8",
+      "name": "Seriously Safe Towns",
+      "city": "Oakland",
+      "state": "CA",
+      "photo": "https://angular.io/assets/images/tutorials/faa/saru-robert-9rP3mxf8qWI-unsplash.jpg",
+      "availableUnits": 10,
+      "wifi": false,
+      "laundry": false
+    },
+    {
+      "id": "9",
+      "name": "Capital Safe Towns",
+      "city": "Portland",
+      "state": "OR",
+      "photo": "https://angular.io/assets/images/tutorials/faa/webaliser-_TPTXZd9mOo-unsplash.jpg",
+      "availableUnits": 6,
+      "wifi": true,
+      "laundry": true
+    }
+  ],
+  "doctors": [
+    {
+      "id": "Dr002",
+      "drid": "Dr002",
+      "department": "GENERAL SURGERY",
+      "specialization": "Consultant – General Surgery",
+      "photo": "https://www.squarehospital.com/storage/images/1543208339.jpg",
+      "gender": "true",
+      "dob": "2024-08-01",
+      "address": "Dhaka",
+      "phone": "0987654321",
+      "firstname": "Dr. Mohammad",
+      "lastname": "Israt Faisal",
+      "email": "Faisal@gmail.com"
+    },
+    {
+      "id": "Dr003",
+      "drid": "Dr003",
+      "firstname": "Dr. Mohammad Yasin Chowdhury",
+      "lastname": "Yasin Chowdhury",
+      "email": "Chowdhury@gmail.com",
+      "phone": "345234",
+      "address": "Azimpur",
+      "dob": "2024-08-14",
+      "gender": "true",
+      "photo": "https://www.squarehospital.com/storage/images/1521004957Dr_Yasin_(4).JPG",
+      "specialization": "Laparoscopic Surgery",
+      "department": "GENERAL SURGERY"
+    }
+  ],
+  "nurses": [
+    {
+      "id": "494f",
+      "employeeid": "1234",
+      "firstname": "raju",
+      "lastname": "Ahmed",
+      "email": "raju55@gmail.com",
+      "phone": "`123456",
+      "address": "Azompur",
+      "photo": "okay",
+      "specialization": "humn",
+      "department": "hmm",
+      "gender": true,
+      "dob": "2024-07-31"
+    }
+  ],
+  "departments": [
+    {
+      "id": "D001",
+      "name": "CHILD DEVELOPMENT",
+      "headOfDepartment": "Dr. Major (Retd) Zeena Salwa",
+      "location": "Dhaka",
+      "phone": "01819325077 ",
+      "email": "zeena.salwa@gmail.com",
+      "numberOfDoctors": "4",
+      "numberOfNurses": "6"
+    },
+    {
+      "id": "D002",
+      "name": "GENERAL SURGERY",
+      "headOfDepartment": "Dr. Mohammad Israt Faisal",
+      "location": "Dhaka",
+      "phone": "01815985077 ",
+      "email": "israt.faisal@gmail.com",
+      "numberOfDoctors": "7",
+      "numberOfNurses": "5"
+    },
+    {
+      "id": "D003",
+      "name": "ORTHOPEDICS",
+      "headOfDepartment": "Dr. Md. O.F.G Kibria",
+      "location": "Dhaka",
+      "phone": "01819325077 ",
+      "email": "kibria@gmail.com",
+      "numberOfDoctors": "4",
+      "numberOfNurses": "8"
+    },
+    {
+      "id": "D004",
+      "name": "NEURO SURGERY",
+      "headOfDepartment": "Dr. A M Rejaus Satter",
+      "location": "Dhaka",
+      "phone": "01819325077 ",
+      "email": "satter@gmail.com",
+      "numberOfDoctors": "3",
+      "numberOfNurses": "6"
+    },
+    {
+      "id": "D005",
+      "name": "CARDIAC & VASCULAR SURGERY",
+      "headOfDepartment": "Dr. Md. Akhtanur Rahman Joarder",
+      "location": "Dhaka",
+      "phone": "01819325077 ",
+      "email": "joarder@gmail.com",
+      "numberOfDoctors": "4",
+      "numberOfNurses": "6"
+    },
+    {
+      "id": "f054",
+      "name": "Bangla",
+      "headOfDepartment": "Bangla",
+      "location": "Dhaka",
+      "phone": "0987654321",
+      "email": "rezvi@gmail.com",
+      "numberOfDoctors": "4",
+      "numberOfNurses": "6"
+    }
+  ],
+  "receptionists": [
+    {
+      "id": "b1a7",
+      "name": "Rezvi",
+      "phone": "0987",
+      "email": "rblannk@gmail.com",
+      "gender": "true",
+      "shift": "sadasd",
+      "status": "sadsadsd"
+    },
+    {
+      "id": "1890",
+      "name": "Mostofa Blannk",
+      "phone": "0987654321",
+      "email": "rblannk@gmail.com",
+      "gender": "true",
+      "shift": "true",
+      "status": "sadsadsd"
+    }
+  ],
+  "adminprofile": {
+    "name": "John Doe M",
+    "specialization": "Cardiology",
+    "phone": "123-456-7890",
+    "email": "john.doe@example.com",
+    "birthday": "1980-01-01",
+    "address": "123 Main St, City, Country",
+    "gender": "Male",
+    "avatar": "https://example.com/avatar.jpg",
+    "employeeId": "EMP0012",
+    "education": [
+      {
+        "institution": "Medical University",
+        "degree": "MD",
+        "startYear": "2000",
+        "endYear": "2004"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Senior Doctor",
+        "startDate": "2005-01-01",
+        "endDate": "Present"
+      }
+    ]
+  },
+  "doctorprofile": {
+    "name": "Jane Smith",
+    "specialization": "Pediatrics",
+    "phone": "987-654-3210",
+    "email": "jane.smith@example.com",
+    "birthday": "1975-06-15",
+    "address": "456 Elm St, Townsville, Country",
+    "gender": "Female",
+    "avatar": "https://www.shutterstock.com/image-photo/profile-photo-attractive-family-doc-600nw-1724693776.jpg",
+    "licenseId": "LIC1234",
+    "education": [
+      {
+        "institution": "Health University",
+        "degree": "MD",
+        "startYear": "1995",
+        "endYear": "1999"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Consultant Pediatrician",
+        "startDate": "2000-02-01",
+        "endDate": "Present"
+      }
+    ]
+  },
+  "nurseprofile": {
+    "name": "Jane Doe",
+    "specialization": "Pediatrics",
+    "phone": "987-654-3210",
+    "email": "jane.doe@example.com",
+    "birthday": "1985-06-15",
+    "address": "456 Elm St, City, Country",
+    "gender": "Female",
+    "avatar": "https://img.freepik.com/free-photo/medium-shot-female-nurse-hospital_23-2150796694.jpg",
+    "licenseNumber": "NUR12345",
+    "education": [
+      {
+        "institution": "Nursing School",
+        "degree": "BSN",
+        "startYear": "2008",
+        "endYear": "2012"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Registered Nurse",
+        "startDate": "2013-01-01",
+        "endDate": "Present"
+      }
+    ]
+  },
+  "patientprofile": {
+    "name": "Jane Smith",
+    "dateOfBirth": "1990-05-15",
+    "phone": "987-654-3210",
+    "email": "jane.smith@example.com",
+    "address": "456 Elm St, Town, Country",
+    "gender": "Female",
+    "avatar": "https://www.befunky.com/images/wp/wp-2021-01-linkedin-profile-picture-focus-face.jpg?auto=avif,webp&format=jpg&width=944",
+    "medicalHistory": [
+      {
+        "condition": "Asthma",
+        "diagnosisDate": "2010-03-22",
+        "notes": "Mild asthma, using inhaler as needed."
+      }
+    ],
+    "allergies": [
+      {
+        "substance": "Penicillin",
+        "reaction": "Hives"
+      }
+    ]
+  },
+  "receptionistprofile": {
+    "name": "Jane Doe",
+    "phone": "987-654-3210",
+    "email": "jane.doe@example.com",
+    "address": "456 Elm St, City, Country",
+    "gender": "Female",
+    "avatar": "https://media.istockphoto.com/id/1698740094/photo/smiling-female-receptionist-looking-at-camera.jpg?s=612x612&w=0&k=20&c=aK-FETZNMjdySyUJTURIHggPyrsLvEBO7Ad_jMwtYy4=",
+    "employeeId": "REC0012",
+    "position": "Front Desk Receptionist",
+    "department": "Administration",
+    "workHours": "9 AM - 5 PM"
+  },
+  "appointments": [
+    {
+      "id": "947b",
+      "department": {
+        "id": "D001",
+        "name": "CHILD DEVELOPMENT",
+        "headOfDepartment": "Dr. Major (Retd) Zeena Salwa",
+        "location": "Dhaka",
+        "phone": "01819325077 ",
+        "email": "zeena.salwa@gmail.com",
+        "numberOfDoctors": "4",
+        "numberOfNurses": "6"
+      },
+      "doctor": {
+        "id": "Dr001",
+        "drid": "Dr101",
+        "firstname": "Dr. Major (Retd)",
+        "lastname": "Zeena Salwa",
+        "email": "zeena.salwa@gmail.com",
+        "phone": "01819325077",
+        "address": "Dhaka",
+        "dob": "2024-09-07",
+        "gender": "false",
+        "photo": "https://www.squarehospital.com/storage/images/1716367107.png",
+        "specialization": "Pediatrics and Child Development Center (CDC)",
+        "department": "CHILD DEVELOPMENT"
+      },
+      "patientName": "Rezvi",
+      "patientEmail": "rezvi@mail.com",
+      "appointmentDate": "2024-10-01",
+      "appointmentTime": "21:40"
+    },
+    {
+      "id": "af13",
+      "department": {
+        "id": "D001",
+        "name": "CHILD DEVELOPMENT",
+        "headOfDepartment": "Dr. Major (Retd) Zeena Salwa",
+        "location": "Dhaka",
+        "phone": "01819325077 ",
+        "email": "zeena.salwa@gmail.com",
+        "numberOfDoctors": "4",
+        "numberOfNurses": "6"
+      },
+      "doctor": {
+        "id": "Dr002",
+        "drid": "Dr002",
+        "department": "GENERAL SURGERY",
+        "specialization": "Consultant – General Surgery",
+        "photo": "https://www.squarehospital.com/storage/images/1543208339.jpg",
+        "gender": "true",
+        "dob": "2024-08-01",
+        "address": "Dhaka",
+        "phone": "0987654321",
+        "firstname": "Dr. Mohammad",
+        "lastname": "Israt Faisal",
+        "email": "Faisal@gmail.com"
+      },
+      "patientName": "Raju",
+      "patientEmail": "raju@gmail.com",
+      "appointmentDate": "2024-10-01",
+      "appointmentTime": "22:01"
+    },
+    {
+      "id": "f42c",
+      "department": {
+        "id": "D001",
+        "name": "CHILD DEVELOPMENT",
+        "headOfDepartment": "Dr. Major (Retd) Zeena Salwa",
+        "location": "Dhaka",
+        "phone": "01819325077 ",
+        "email": "zeena.salwa@gmail.com",
+        "numberOfDoctors": "4",
+        "numberOfNurses": "6"
+      },
+      "doctor": {
+        "id": "Dr002",
+        "drid": "Dr002",
+        "department": "GENERAL SURGERY",
+        "specialization": "Consultant – General Surgery",
+        "photo": "https://www.squarehospital.com/storage/images/1543208339.jpg",
+        "gender": "true",
+        "dob": "2024-08-01",
+        "address": "Dhaka",
+        "phone": "0987654321",
+        "firstname": "Dr. Mohammad",
+        "lastname": "Israt Faisal",
+        "email": "Faisal@gmail.com"
+      },
+      "patientName": "Rezvi",
+      "patientEmail": "rezvi@mail.com",
+      "appointmentDate": "2024-10-01",
+      "appointmentTime": "22:30"
+    }
+  ],
+  "appointmentdoc": [],
+  "patients": [
+    {
+      "id": "0",
+      "name": "rezvi",
+      "age": 26,
+      "gender": "Male",
+      "dateOfBirth": "2024-08-16",
+      "contact": "0123456",
+      "address": "Dhaka",
+      "medicalHistory": "no",
+      "reason": "no",
+      "status": "No"
+    },
+    {
+      "id": "0",
+      "name": "rezvi",
+      "age": 26,
+      "gender": "Male",
+      "dateOfBirth": "2024-08-16",
+      "contact": "0123456",
+      "address": "Dhaka",
+      "medicalHistory": "no",
+      "reason": "no",
+      "status": "No"
+    },
+    {
+      "id": "0",
+      "name": "rezvi",
+      "age": 26,
+      "gender": "Male",
+      "dateOfBirth": "2024-08-16",
+      "contact": "0123456",
+      "address": "Dhaka",
+      "medicalHistory": "no",
+      "reason": "no",
+      "status": "No"
+    },
+    {
+      "id": "0"
+    },
+    {
+      "id": "0b27",
+      "name": "rezvi",
+      "age": 26,
+      "gender": "Male",
+      "dateOfBirth": "2024-09-07",
+      "contact": "0123456",
+      "address": "dhaka",
+      "medicalHistory": "no",
+      "reason": "no",
+      "status": "No"
+    },
+    {
+      "id": "b3ec",
+      "name": "Rezvi",
+      "address": "Azimpur",
+      "age": 26,
+      "gender": "Male",
+      "dateOfBirth": "2024-08-08",
+      "contact": "0123456",
+      "medicalHistory": "NO",
+      "reason": "no",
+      "status": "OKAY"
+    },
+    {
+      "id": "7b45",
+      "name": "Rezvi",
+      "age": 25,
+      "contact": "0123456",
+      "status": "OKAY",
+      "address": "Azimpur",
+      "gender": "Male",
+      "dateOfBirth": "2024-08-01",
+      "medicalHistory": "adfsa",
+      "reason": "dsfasd"
+    },
+    {
+      "id": "1ec9",
+      "name": "Rezvi",
+      "address": "Azimpur",
+      "age": 122,
+      "gender": "Female",
+      "dateOfBirth": "2024-08-06",
+      "contact": "0123456",
+      "medicalHistory": "Amazing",
+      "reason": "Emni",
+      "status": "Acive"
+    },
+    {
+      "id": "6fd7",
+      "name": "FINAL TEST222222",
+      "age": 1232,
+      "gender": "Male",
+      "dateOfBirth": "2024-08-20",
+      "contact": "0123456",
+      "status": "Acive",
+      "medicalHistory": "WOW2",
+      "address": "WOW2",
+      "reason": "WOW2"
+    }
+  ],
+  "reportdoc": []
+}

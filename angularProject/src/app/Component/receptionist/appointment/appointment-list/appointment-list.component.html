@@ -1,0 +1,50 @@
+<div class="container mt-5">
+  <h2 class="text-center">Appointments List</h2>
+
+  <!-- Search Bar -->
+  <div class="text-center mb-4">
+    <p>Search Functionality Here:</p>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search by Patient Name or Doctor" class="form-control" style="width: 300px; display: inline-block;">
+    <button (click)="searchAppointments()" class="btn btn-primary ml-2">Search</button>
+  </div>
+
+  <div *ngIf="isLoading" class="text-center">
+    <p>Loading appointments...</p>
+  </div>
+
+  <div *ngIf="!isLoading && appointments.length === 0" class="text-center">
+    <p>No appointments found.</p>
+  </div>
+
+  <div *ngIf="appointments.length > 0">
+    <div class="appointment-table">
+      <div class="appointment-header">
+        <div>Patient Name</div>
+        <div>Email</div>
+        <div>Phone</div>
+        <div>Date</div>
+        <div>Time</div>
+        <div>Doctor</div>
+        <div>Assign Doctor</div>
+      </div>
+
+      <div class="appointment-row" *ngFor="let appointment of filteredAppointments">
+        <div>{{ appointment.name }}</div>
+        <div>{{ appointment.email }}</div>
+        <div>{{ appointment.phone }}</div>
+        <div>{{ appointment.date | date: 'shortDate' }}</div>
+        <div>{{ appointment.time }}</div>
+        <div>{{ appointment.notes }}</div>
+        <div>{{ appointment.doctor.name || 'Not Assigned' }}</div>
+        <div class="assign-doctor">
+          <select class="form-control" (change)="onDoctorSelect(appointment, $event)">
+            <option value="">Select Doctor</option>
+            <option *ngFor="let doctor of doctors" [value]="doctor.id">{{ doctor.name }}</option>
+          </select>
+          <button (click)="assignDoctor(appointment)" class="btn btn-primary mt-2">Assign</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

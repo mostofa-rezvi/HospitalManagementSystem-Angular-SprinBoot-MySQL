@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Update Test</h2>
+  <form (ngSubmit)="updateTest()">
+    <input type="hidden" id="id" [(ngModel)]="test.id" name="id" required class="form-control" />
+    <div class="form-group">
+      <label for="testName">Test Name</label>
+      <input type="text" id="testName" [(ngModel)]="test.testName" name="testName" required class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" [(ngModel)]="test.description" name="description" required class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="result">Result</label>
+      <input type="text" id="result" [(ngModel)]="test.result" name="result" required class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="instructions">Instructions</label>
+      <textarea id="instructions" [(ngModel)]="test.instructions" name="instructions" required class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Test</button>
+  </form>
+</div>

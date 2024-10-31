@@ -1,0 +1,165 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title and Header Styling */
+.head {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.head h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.head h6 {
+    margin-bottom: 60px;
+}
+
+.head h6 a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.head h6 a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard Container */
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Department Header Styling */
+.dashboard .department {
+    background-color: #daecff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dashboard .department h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Doctors Section Styling */
+.doctors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Card Styling */
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(50% - 20px);
+    /* 2 cards per row with gap */
+    max-width: calc(50% - 20px);
+    /* Ensures cards fit within container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Image Styling */
+.card-image {
+    flex: 1 1 40%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+/* Card Body Styling */
+.card-body {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensures the content is spread out */
+    padding: 20px;
+}
+
+/* Card Info Styling */
+.card-info {
+    flex: 1;
+    /* Take up remaining space */
+}
+
+.card-info h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.card-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Card Buttons Styling */
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    /* Center-align buttons horizontally */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Button Styling */
+.card-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(100% - 20px);
+        /* 1 card per row on smaller screens */
+        max-width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 800px) {
+    .card {
+        flex: 1 1 calc(100% - 20px);
+        /* 1 card per row on very small screens */
+        max-width: calc(100% - 20px);
+    }
+}
+

@@ -1,0 +1,20 @@
+*Pharmacist:
+pha@gmail.com
+
+*Lab:
+rblannk@gmail.com
+
+*Admin:
+admin@gmail.com
+
+*Receptionist:
+recep@gmail.com
+
+Patient:
+child@gmail.com
+
+Doctor:
+raju@gmail.com
+
+
+Common Password: 123

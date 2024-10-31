@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Department List</h2>
+
+  <!-- Button to navigate to Add Department -->
+  <button class="btn btn-success mb-3" (click)="navigateToAddDepartment()">Add Department</button>
+
+  <!-- Department table -->
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Department Name</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let department of departments">
+      <td>{{department.id}}</td>
+      <td>{{department.departmentName}}</td>
+      <td>{{department.description}}</td>
+      <td>
+        <!-- Update/Edit Button -->
+        <button class="btn btn-primary" (click)="editDepartment(department.id)">Edit</button>
+        <!-- Delete Button -->
+        <button class="btn btn-danger" (click)="deleteDepartment(department.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

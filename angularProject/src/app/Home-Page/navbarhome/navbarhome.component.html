@@ -1,0 +1,100 @@
+<!-- Care Health Center -->
+
+<!-- Topbar Start -->
+<div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
+    <div class="row gx-0">
+        <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center">
+                <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Opening Hours: Mon - Tues : 6.00 am -
+                    10.00 pm, Sunday Closed </small>
+            </div>
+        </div>
+        <div class="col-md-6 text-center text-lg-end">
+            <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+                <div class="me-3 pe-3 border-end py-2">
+                    <p class="m-0"><i class="fa fa-envelope-open me-2"></i>www.carehealth.com</p>
+                </div>
+                <div class="py-2">
+                    <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+<!-- icon  -->
+<!-- <i class="fa-solid fa-stethoscope"></i> -->
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+    <a href="#" class="navbar-brand p-0">
+        <h1 class="m-0 text-primary"><img src="../../../assets/img/logo-dark.png" style="height: 50px; width: 50px;"
+                alt=""> Care Health Center</h1>
+        <!-- <h1 class="m-0 text-primary"><i class="fa-solid fa-stethoscope me-2"></i>Care Health Center</h1> -->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <a href="" class="nav-item nav-link active">Home</a>
+            <a href="doctorshome" class="nav-item nav-link">Doctors</a>
+            <a href="departmenthome" class="nav-item nav-link">Departments</a>
+            <a href="doappointment" class="nav-item nav-link">Froms</a>
+
+
+            <a href="#footerhome" class="nav-item nav-link">Contact</a>
+        </div>
+        <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i
+                class="fa fa-search"></i></button>
+        <div>
+            <form>
+                <!-- &lt;!&ndash; Button with type="submit" will cause a page reload &ndash;&gt; -->
+                <button type="button" class="btn btn-primary py-2 px-4 ms-3"><a href="doappointment"
+                        style="color: white;">Appointment</a></button>
+
+            </form>
+        </div>
+        <div>
+            <form>
+                <!-- Button with type="submit" will cause a page reload -->
+                <button type="button" class="btn btn-primary py-2 px-4 ms-3"><a href="/login"
+                        style="color: white;">Login</a></button>
+
+            </form>
+        </div>
+        <!-- <div> -->
+            <!-- <form> -->
+                <!-- Button with type="submit" will cause a page reload -->
+                <!-- <button type="button" (click)="logout()" class="btn btn-primary py-2 px-4 ms-3">Logout</button> -->
+
+            <!-- </form> -->
+        <!-- </div> -->
+
+
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+
+<!-- Full Screen Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+            <div class="modal-header border-0">
+                <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="input-group" style="max-width: 600px;">
+                    <input type="text" class="form-control bg-transparent border-primary p-3"
+                        placeholder="Type search keyword">
+                    <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Full Screen Search End -->

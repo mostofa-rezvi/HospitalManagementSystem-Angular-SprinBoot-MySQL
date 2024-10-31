@@ -1,0 +1,84 @@
+<!-- nurse-edit-profile.component.html -->
+<div class="mt-5 edit-profile-container" *ngIf="profile">
+    <!-- <h1>Edit Nurse Profile</h1> -->
+    <div class="row">
+        <div class="col-sm-5 col-5">
+            <h4 class="page-title">Edit Profile</h4>
+        </div>
+        <div class="col-sm-7 col-7 text-right m-b-20">
+            <a href="nurseprofile" class="btn btn-primary btn-rounded float-end text-white m-1">
+                <i class="fa fa-arrow-left"></i>
+                <span> Back</span>
+            </a>
+        </div>
+    </div>
+
+    <form (ngSubmit)="updateProfile()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input id="name" [(ngModel)]="profile.name" type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="specialization">Specialization:</label>
+            <input id="specialization" [(ngModel)]="profile.specialization" type="text" name="specialization" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input id="phone" [(ngModel)]="profile.phone" type="text" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" [(ngModel)]="profile.email" type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="birthday">Birthday:</label>
+            <input id="birthday" [(ngModel)]="profile.birthday" type="date" name="birthday">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input id="address" [(ngModel)]="profile.address" type="text" name="address">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <input id="gender" [(ngModel)]="profile.gender" type="text" name="gender">
+        </div>
+
+        <div class="form-group">
+            <label for="avatar">Avatar URL:</label>
+            <input id="avatar" [(ngModel)]="profile.avatar" type="text" name="avatar">
+        </div>
+
+        <div class="form-group">
+            <label for="licenseNumber">License Number:</label>
+            <input id="licenseNumber" [(ngModel)]="profile.licenseNumber" type="text" name="licenseNumber">
+        </div>
+
+        <!-- Education and Experience sections -->
+        <div class="form-group">
+            <label>Education:</label>
+            <div *ngFor="let edu of profile.education; let i = index" class="education-group">
+                <input [(ngModel)]="profile.education[i].institution" placeholder="Institution" required>
+                <input [(ngModel)]="profile.education[i].degree" placeholder="Degree" required>
+                <input [(ngModel)]="profile.education[i].startYear" placeholder="Start Year" type="number" required>
+                <input [(ngModel)]="profile.education[i].endYear" placeholder="End Year" type="number" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Experience:</label>
+            <div *ngFor="let exp of profile.experience; let i = index" class="experience-group">
+                <input [(ngModel)]="profile.experience[i].position" placeholder="Position" required>
+                <input [(ngModel)]="profile.experience[i].startDate" placeholder="Start Date" type="date" required>
+                <input [(ngModel)]="profile.experience[i].endDate" placeholder="End Date" type="date" required>
+            </div>
+        </div>
+
+        <button class="submit-button" type="submit">Save Changes</button>
+    </form>
+</div>

@@ -1,0 +1,83 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header text-center">
+      <h3>Create Appointment</h3>
+    </div>
+    <div class="card-body">
+      <div *ngIf="availableDates.length > 0">
+        <label><b>Available Dates</b></label>
+        <div class="d-flex flex-wrap" style="gap: 10px;">
+          <ng-container *ngFor="let date of availableDates">
+            <button type="button" class="btn btn-outline-primary"
+                    [disabled]="selectedDate && selectedDate !== date"
+                    (click)="onDateSelect(date)">
+              {{ date.toLocaleDateString() }}
+            </button>
+          </ng-container>
+        </div>
+      </div>
+
+      <div *ngIf="selectedDate && availableTimes.length > 0">
+        <label class="mt-3"><b>Available Times</b></label>
+        <div class="d-flex flex-wrap" style="gap: 10px;">
+          <ng-container *ngFor="let time of availableTimes">
+            <button type="button" class="btn btn-outline-secondary"
+                    [disabled]="selectedTime && selectedTime !== time"
+                    (click)="onTimeSelect(time)">
+              {{ time }}
+            </button>
+          </ng-container>
+        </div>
+      </div>
+
+      <form *ngIf="selectedTime" (ngSubmit)="createAppointment()">
+        <div class="form-row mt-5">
+          <div class="form-group col-md-6">
+            <label for="name">Patient Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="appointmentModel.name" name="name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="appointmentModel.email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" id="phone" [(ngModel)]="appointmentModel.phone" name="phone" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" [(ngModel)]="appointmentModel.age" name="age" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender" [(ngModel)]="appointmentModel.gender" name="gender" required>
+              <option value="" disabled>Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="birthday">Birthday</label>
+            <input type="date" class="form-control" id="birthday" [(ngModel)]="appointmentModel.birthday" name="birthday" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Doctor Name</label>
+          <textarea class="form-control" id="notes" [(ngModel)]="appointmentModel.notes" name="notes" rows="3"></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Submit Appointment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
