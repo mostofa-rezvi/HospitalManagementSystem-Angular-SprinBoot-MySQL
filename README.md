@@ -80,57 +80,96 @@ This modular design allows for a smooth user experience and restricting access a
 ## Landing Page:
 
 ### :pushpin: Home Page
+![Landing Page](https://github.com/user-attachments/assets/4dd44c26-8de7-418e-a18a-6e4cf58cf268)
 
 ### :pushpin: All Department
+![Department List](https://github.com/user-attachments/assets/8b47393d-c3ca-437b-bdcd-4e1e9d6b7389)
 
 ### :pushpin: Login Page (Also Registration and Forget Password)
+![Login Page](https://github.com/user-attachments/assets/56a5eac5-bdca-4eb6-8ee6-ef2fb5f433fa)
+
+### :pushpin: Public Appointment (Part 1 & 2)
+![Appointment Page 01 (without login)](https://github.com/user-attachments/assets/4c529ae4-524a-4aed-97d7-08e5a1d4e56a)
+![Appointment Page 02 (without login)](https://github.com/user-attachments/assets/2386eae9-5725-48a9-b388-d6d22de0603e)
 
 
 
 ## Role 1: Admin
 
-### :pushpin: Department Crud (Admin)
+### :pushpin: Department List (Admin)
+![Admin - Department List](https://github.com/user-attachments/assets/48b868c5-9624-4ba7-aec3-9c8c07cdfbf1)
 
-### :pushpin: Doctor Crud (Admin)
+### :pushpin: Manufacturer List (Admin)
+![Admin - Manufacturer List](https://github.com/user-attachments/assets/bf1ef034-65be-41ba-ace3-353423532925)
 
-### :pushpin: Nurse Crud (Admin)
+### :pushpin: User List (Admin)
+![Admin - User List](https://github.com/user-attachments/assets/af83e533-d9e7-41c4-8ce4-d819e2b6f5cb)
 
-### :pushpin: Receptionist Crud (Admin)
+### :pushpin: Create New User (Admin)
+![Admin - Create User with Role base](https://github.com/user-attachments/assets/c7b06f6d-3255-4c14-862a-ba1dd4bda602)
+
+### :pushpin: Create User Role Base (Admin)
+![Admin - Role Doctor than add 4 extra row](https://github.com/user-attachments/assets/77554a7e-0008-4aee-be72-55c802c441ed)
 
 
 
 ## Role 2: Doctor
 
-### :pushpin: Patient Crud (Doctor)
+### :pushpin: Create Prescription (Doctor)
+![Doctor - Create Prescription](https://github.com/user-attachments/assets/7d4e47d9-4906-48cc-a181-f6d59acf1b93)
+
+### :pushpin: Medinice List Print  (Doctor)
+![Doctor - Create Medinice List Print](https://github.com/user-attachments/assets/58a6b784-84ed-4859-b688-1371a1efc9b4)
 
 
 
 ## Role 3: Pharmacist
 
-### :pushpin: Appointment List (Nurse)
+### :pushpin: All Medicine List (Pharmacist)
+![Pharmacist Medicine List](https://github.com/user-attachments/assets/c11e56aa-3233-4534-9841-568738dc1296)
+
+### :pushpin: Medicine Bill Create (Pharmacist)
+![Pharmacist Medicine Bill Create](https://github.com/user-attachments/assets/25e2b3ef-8fa9-4917-a158-dc1402292ee0)
+
+### :pushpin: Medicine Bill List (Pharmacist)
+![Pharmacist Medicine Bill List](https://github.com/user-attachments/assets/4ab645e9-a010-4e59-b976-bf71d4a7bdaa)
 
 
 
 ## Role 4: Laboratorist
 
-### :pushpin: Doctor Appointment
+### :pushpin: Create Reports (Laboratorist)
+![Laboratorist Create Reports](https://github.com/user-attachments/assets/ec061ad0-a308-4853-a5b1-a512618cd3a6)
+
+### :pushpin: Reports List (Laboratorist)
+![Laboratorist Report List](https://github.com/user-attachments/assets/8fe4681a-91eb-43ea-a896-32bb69a6915b)
 
 
 
 ## Role 5: Receptionist
 
-### :pushpin: Patient Profile (Same for all Users)
+### :pushpin: Assign Doctors in Appointment (Receptionist)
+![Receptionist - Assign Doctors against Appointment](https://github.com/user-attachments/assets/c59c083d-c369-4251-857a-9fa326545937)
+
+### :pushpin: Receptionist Jobs
+![Receptionist Jobs](https://github.com/user-attachments/assets/e48f7cf8-3c86-4189-b6b6-f205b0cc2b9b)
 
 
 
 ## Role 6: Patient
 
+### :pushpin: Patient Jobs
+![Patient Jobs](https://github.com/user-attachments/assets/4fef540f-f89f-41ab-9722-bd471acd18a3)
 
 
 
 ## For All (Common)
 
-### :pushpin: Admin Profile (Same for all Users)
+### :pushpin: Welcome Page (After Login & Common for all)
+![Common Welcome Page for all](https://github.com/user-attachments/assets/9df36514-adec-469e-8c77-89d2020be725)
+
+### :pushpin: Activities (Common for all)
+![Activities - Common for all](https://github.com/user-attachments/assets/3dee0c7e-4aeb-47ac-8888-55d68e2b3be6)
 
 
 --------------------------------------------------------------
