@@ -51,12 +51,16 @@ This modular design allows for a smooth user experience and restricting access a
 - [<img src="https://github.com/user-attachments/assets/76105614-0d88-4d34-9472-6a72e8c4415c" width="40" height="40">](https://github.com/mostofa-rezvi)
 - [<img src="https://github.com/user-attachments/assets/19881f38-d86a-4d10-87c9-e491f49793f1" width="40" height="40">](https://github.com/mostofa-rezvi)
 - [<img src="https://github.com/user-attachments/assets/1d546873-8eb2-40e3-bddc-eb903a1fdbcc" width="40" height="40">](https://github.com/mostofa-rezvi)
+- [<img src="https://github.com/user-attachments/assets/f3e7b973-2135-4c4e-b231-f74ee7b01d83" width="40" height="40">](https://github.com/mostofa-rezvi)
+
 
 ### Backend Development
 
-- [<img src="https://github.com/user-attachments/assets/83e6db33-502a-433c-8565-774ba217c298" width="40" height="40">](https://github.com/mostofa-rezvi)
-- [<img src="https://github.com/user-attachments/assets/83e6db33-502a-433c-8565-774ba217c298" width="40" height="40">](https://github.com/mostofa-rezvi)
-- [<img src="https://github.com/user-attachments/assets/83e6db33-502a-433c-8565-774ba217c298" width="40" height="40">](https://github.com/mostofa-rezvi)
+- [<img src="https://github.com/user-attachments/assets/aa4a0ee5-8721-4339-bd52-8804c9780d4e" width="40" height="40">](https://github.com/mostofa-rezvi)
+- [<img src="https://github.com/user-attachments/assets/cda9df90-af0f-4ef2-8a4f-6ed33832501e" width="40" height="40">](https://github.com/mostofa-rezvi)
+- [<img src="https://github.com/user-attachments/assets/cc4a9948-912f-48c6-a04c-3ba916849f5c" width="40" height="40">](https://github.com/mostofa-rezvi)
+- [<img src="https://github.com/user-attachments/assets/41e62829-d1f3-46c7-a3f9-ce7bec94c0e2" width="40" height="40">](https://github.com/mostofa-rezvi)
+- [<img src="https://github.com/user-attachments/assets/ccca53de-9d4b-4c05-8c00-7353b598fb10" width="40" height="40">](https://github.com/mostofa-rezvi)
 
 
 ### Software And Tools Required
